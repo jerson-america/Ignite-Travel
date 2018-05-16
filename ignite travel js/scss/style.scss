@@ -1,0 +1,148 @@
+$white: #ffffff;
+$black: #000000;
+$btn-primary: #ee3252;
+
+*{
+		box-sizing: border-box;
+}
+body{
+	font-family: Century Gothic;
+}
+
+#wrapper{
+	.tiles{
+		position: relative;
+		.tiles-bg{
+			img{
+				width: 100%;
+				height: 450px;
+			}
+		}
+
+		.info-wrap{
+			position: absolute;
+			top: 30px;
+			right: 100px;
+			text-align: center;
+
+			> span{
+				background: $black;
+				color: $white;
+				display: inline-block;
+			}
+			.info-box{
+				padding: 10px;
+				background:rgba(255,255,255, 0.7);
+				border-top: 2px solid $black;
+				box-shadow: 1px 1px 0 0 #aaa;
+				width: 300px;
+				.top-logo{
+					margin: 10px 0px;
+				}
+				.text-header{
+					.name{
+						font-size: 19px;
+					}
+				}
+				.icons-wrap{
+					margin: 15px 0px;
+					.icon{
+						display: inline-block;
+						img{
+							display: block;
+							width: 40px;
+							height: 40px;
+						}
+						span{
+							font-size: 13px;
+						}
+
+						&:not(:last-child){
+							margin-right: 15px;
+						}
+					}
+				}
+				.footer-info{
+					// width: 250px;
+					.pricing{
+						vertical-align: middle;
+						display: inline-block;
+						padding: 5px 8px;
+						// margin-right: -4px; // remove spacing between inline elements
+						height: 50px;
+						p{
+							font-size: 12px;							
+						}
+						&:first-child{
+							background: $white;
+							width: 110px;
+
+							span:not(.suffix){
+								font-size: 19px;
+						    color: #000;
+						    line-height: 31px;
+						    font-weight: bold;
+							}
+						}
+						&:nth-child(2){
+							background: #00b5c9;
+							width: 70px;
+							span{
+								display: block;
+								&:not(.suffix){
+									font-size: 17px;
+    							font-weight: bold;
+								}
+							}
+						}
+						&:last-child{
+							font-weight: bold;
+							background: $black;
+							width: 100px;
+							span:not(.suffix){
+								  font-weight: bolder;
+    							font-size: 27px;
+    							letter-spacing: -3px;
+							}
+							span.asterisk{
+								font-size: 12px;
+						    display: inline-block;
+						    vertical-align: top;
+						    margin-left: 2px;
+							}
+						}
+						&:not(:first-child){
+							color: $white;
+						}
+						span.suffix{
+							font-size: 12px;
+						}
+					}
+				}
+				> a {
+					color: $white;
+			    background: #ee3252;
+			    display: inline-block;
+					width: 100%;
+			    padding: 7px;
+			    text-decoration: none;
+			    text-transform: uppercase;
+			    font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+// Media CSS for tablet and smaller devices
+@media screen and (max-width: 480px){
+	#wrapper{
+		.tiles{
+			.info-wrap{
+		    right: auto;
+		    left: 50%;
+		    transform: translate(-50%, 0);
+			}
+		}
+	}
+}
