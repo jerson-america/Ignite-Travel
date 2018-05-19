@@ -8,6 +8,11 @@ $btn-primary: #ee3252;
 body{
 	font-family: Century Gothic;
 }
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
 
 #wrapper{
 	.tiles{
@@ -65,10 +70,10 @@ body{
 				.footer-info{
 					// width: 250px;
 					.pricing{
+						float: left;
 						vertical-align: middle;
 						display: inline-block;
 						padding: 5px 8px;
-						// margin-right: -4px; // remove spacing between inline elements
 						height: 50px;
 						p{
 							font-size: 12px;							

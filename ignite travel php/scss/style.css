@@ -4,6 +4,11 @@
 body {
   font-family: Century Gothic; }
 
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both; }
+
 #wrapper .tiles {
   position: relative; }
   #wrapper .tiles .tiles-bg img {
@@ -41,6 +46,7 @@ body {
           #wrapper .tiles .info-wrap .info-box .icons-wrap .icon:not(:last-child) {
             margin-right: 15px; }
       #wrapper .tiles .info-wrap .info-box .footer-info .pricing {
+        float: left;
         vertical-align: middle;
         display: inline-block;
         padding: 5px 8px;
